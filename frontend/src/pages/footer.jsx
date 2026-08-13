@@ -1,5 +1,6 @@
 import Logo from "./images/logo.png";
 import { FaInstagram, FaThreads, FaWhatsapp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const Footer = () => {
@@ -38,12 +39,13 @@ const Footer = () => {
         </div>
 
         <div className="links_footer">
-          <a className="link_footer" href="/OurStories">
+          <Link className="link_footer" to="/OurStories">
             Our Stories
-          </a>
-          <a className="link_footer" href="/contact">
+          </Link>
+
+          <Link className="link_footer" to="/contact">
             Contact Us
-          </a>
+          </Link>
         </div>
 
         <div className="bottom_footer">
