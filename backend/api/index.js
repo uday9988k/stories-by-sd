@@ -2,11 +2,11 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-require("./Models/db");
+require("../Models/db");
 
-const adminRoutes = require("./Routes/adminRoutes");
-const storyRoutes = require("./Routes/storyRoutes");
-const contactRoutes = require("./Routes/contactRoutes");
+const adminRoutes = require("../Routes/adminRoutes");
+const storyRoutes = require("../Routes/storyRoutes");
+const contactRoutes = require("../Routes/contactRoutes");
 
 const app = express();
 
@@ -28,7 +28,7 @@ if (process.env.NODE_ENV !== "production") {
   const PORT = process.env.PORT || 8080;
 
   app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(` Server running on http://localhost:${PORT}`);
   });
 }
 
