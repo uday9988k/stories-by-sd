@@ -21,13 +21,16 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/admin", adminRoutes);
-
 app.use("/api/story", storyRoutes);
-
 app.use("/api/contact", contactRoutes);
 
-const PORT = process.env.PORT || 8080;
+// Local development only
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
