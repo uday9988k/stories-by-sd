@@ -71,7 +71,15 @@ const createStory = async (req, res) => {
 // ========================================
 const getAllStories = async (req, res) => {
   try {
+    console.log("📸 Fetching wedding stories...");
+    console.log(
+      "MongoDB readyState:",
+      require("mongoose").connection.readyState,
+    );
+
     const stories = await Story.find().sort({ createdAt: -1 });
+
+    console.log("✅ Stories found:", stories.length);
 
     res.status(200).json({
       success: true,
@@ -79,11 +87,15 @@ const getAllStories = async (req, res) => {
       stories,
     });
   } catch (error) {
+    console.error("❌ GET ALL STORIES ERROR:");
     console.error(error);
+    console.error("Message:", error.message);
+    console.error("Name:", error.name);
 
     res.status(500).json({
       success: false,
       message: "Server Error",
+      error: error.message,
     });
   }
 };
