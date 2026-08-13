@@ -16,7 +16,7 @@ const ViewContacts = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const response = await axios.get("http://localhost:8080/api/contact", {
+      const response = await axios.get("/api/contact", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const ViewContacts = () => {
       const token = localStorage.getItem("adminToken");
 
       const response = await axios.put(
-        `http://localhost:8080/api/contact/${id}/status`,
+        `/api/contact/${id}/status`,
         {
           status,
         },
@@ -96,14 +96,11 @@ const ViewContacts = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const response = await axios.delete(
-        `http://localhost:8080/api/contact/${id}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+      const response = await axios.delete(`/api/contact/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-      );
+      });
 
       if (response.data.success) {
         setContacts((prev) => prev.filter((contact) => contact._id !== id));

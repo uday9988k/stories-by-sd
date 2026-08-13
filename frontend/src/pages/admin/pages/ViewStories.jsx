@@ -18,7 +18,7 @@ const ViewStories = () => {
   // Fetch Stories
   const fetchStories = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/story");
+      const res = await axios.get("/api/story");
 
       if (res.data.success) {
         setStories(res.data.stories);
@@ -44,14 +44,11 @@ const ViewStories = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const res = await axios.delete(
-        `http://localhost:8080/api/story/${deleteId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+      const res = await axios.delete(`/api/story/${deleteId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
-      );
+      });
 
       if (res.data.success) {
         // Refresh stories after deletion

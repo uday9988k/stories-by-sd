@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   const fetchStories = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/story");
+      const res = await axios.get("/api/story");
 
       if (res.data.success) {
         setStories(res.data.stories);

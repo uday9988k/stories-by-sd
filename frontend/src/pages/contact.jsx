@@ -34,7 +34,7 @@ const Contact = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("http://localhost:8080/api/contact", {
+      const response = await axios.post("/api/contact", {
         name: formData.name.trim(),
         location: formData.location.trim(),
         phone: formData.phone.trim(),

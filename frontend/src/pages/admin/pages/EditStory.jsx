@@ -96,7 +96,7 @@ const EditStory = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get(`http://localhost:8080/api/story/${id}`);
+      const res = await axios.get(`/api/story/${id}`);
 
       if (res.data.success) {
         const data = res.data.story;
@@ -542,26 +542,22 @@ const EditStory = () => {
       // API Request
       // ================================
 
-      const res = await axios.put(
-        `http://localhost:8080/api/story/${id}`,
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
-          },
-
-          onUploadProgress: (progressEvent) => {
-            if (progressEvent.total) {
-              const progress = Math.round(
-                (progressEvent.loaded * 100) / progressEvent.total,
-              );
-
-              setUploadProgress(progress);
-            }
-          },
+      const res = await axios.put(`/api/story/${id}`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
         },
-      );
+
+        onUploadProgress: (progressEvent) => {
+          if (progressEvent.total) {
+            const progress = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total,
+            );
+
+            setUploadProgress(progress);
+          }
+        },
+      });
 
       if (res.data.success) {
         toast.success("Wedding Story Updated Successfully!", toastConfig);

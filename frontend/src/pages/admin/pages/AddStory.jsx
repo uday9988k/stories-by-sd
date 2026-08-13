@@ -534,33 +534,29 @@ const AddStory = () => {
         formData.append("videos", video);
       });
 
-      const res = await axios.post(
-        "http://localhost:8080/api/story/create",
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
-          },
-          onUploadProgress: (progressEvent) => {
-            const percent = Math.round(
-              (progressEvent.loaded * 100) / progressEvent.total,
-            );
-            setUploadProgress(percent);
-
-            // Update status based on progress
-            if (percent < 30) {
-              setUploadStatus("Uploading images...");
-            } else if (percent < 60) {
-              setUploadStatus("Uploading videos...");
-            } else if (percent < 90) {
-              setUploadStatus("Processing files...");
-            } else {
-              setUploadStatus("Finalizing...");
-            }
-          },
+      const res = await axios.post("/api/story/create", formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
         },
-      );
+        onUploadProgress: (progressEvent) => {
+          const percent = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total,
+          );
+          setUploadProgress(percent);
+
+          // Update status based on progress
+          if (percent < 30) {
+            setUploadStatus("Uploading images...");
+          } else if (percent < 60) {
+            setUploadStatus("Uploading videos...");
+          } else if (percent < 90) {
+            setUploadStatus("Processing files...");
+          } else {
+            setUploadStatus("Finalizing...");
+          }
+        },
+      });
 
       if (res.data.success) {
         // Set success data for summary

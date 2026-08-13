@@ -66,12 +66,9 @@ const ForgotPassword = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:8080/api/admin/forgot-password",
-        {
-          email,
-        },
-      );
+      const res = await axios.post("/api/admin/forgot-password", {
+        email,
+      });
 
       if (res.data.success) {
         toast.success("OTP sent successfully");
@@ -99,14 +96,11 @@ const ForgotPassword = () => {
     try {
       setLoading(true);
 
-      const res = await axios.put(
-        "http://localhost:8080/api/admin/reset-password",
-        {
-          email,
-          otp,
-          newPassword,
-        },
-      );
+      const res = await axios.put("/api/admin/reset-password", {
+        email,
+        otp,
+        newPassword,
+      });
 
       if (res.data.success) {
         toast.success("Password changed successfully");
