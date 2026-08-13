@@ -24,7 +24,6 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/story", storyRoutes);
 app.use("/api/contact", contactRoutes);
 
-// Local development only
 if (process.env.NODE_ENV !== "production") {
   const PORT = process.env.PORT || 8080;
 
