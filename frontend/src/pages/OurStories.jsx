@@ -23,7 +23,7 @@ const OurStories = () => {
       setLoading(true);
       setError("");
 
-      const response = await axios.get("http://localhost:8080/api/story");
+      const response = await axios.get("/api/story");
 
       if (response.data.success) {
         setStories(response.data.stories || []);

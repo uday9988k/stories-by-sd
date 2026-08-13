@@ -24,7 +24,7 @@ const ViewStory = () => {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(`http://localhost:8080/api/story/${id}`);
+      const response = await axios.get(`/api/story/${id}`);
 
       if (response.data.success) {
         setStory(response.data.story);
