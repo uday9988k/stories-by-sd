@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./forgotPassword.css";
+import "./ForgotPassword.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate, Link } from "react-router-dom";
