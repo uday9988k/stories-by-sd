@@ -1,0 +1,203 @@
+/* ===== SIDEBAR CONTAINER ===== */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-right: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* ===== BRAND SECTION ===== */
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 20px;
+  text-align: center;
+}
+
+.sidebar-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: "Georgia", serif;
+}
+
+.brand-subtitle {
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: -2px;
+}
+
+.brand-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== MENU SECTION ===== */
+.sidebar-menu {
+  flex: 1;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sidebar-link .menu-icon {
+  font-size: 18px;
+  min-width: 22px;
+  transition: color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.sidebar-link.active {
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 24px;
+  background: #d4af37;
+  border-radius: 0 3px 3px 0;
+}
+
+.sidebar-link.active .menu-icon {
+  color: #d4af37;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  margin: 10px 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #888888;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.logout-btn .menu-icon {
+  font-size: 18px;
+  min-width: 22px;
+}
+
+.logout-btn:hover {
+  color: #ff4d4f;
+  background: rgba(255, 77, 79, 0.08);
+}
+
+/* ===== SCROLLBAR ===== */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-brand .brand-name,
+  .sidebar-brand .brand-subtitle,
+  .sidebar-brand .brand-divider,
+  .sidebar-link span,
+  .logout-btn span {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  .sidebar-link .menu-icon {
+    font-size: 22px;
+    min-width: auto;
+  }
+
+  .logout-btn {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  .logout-btn .menu-icon {
+    font-size: 22px;
+    min-width: auto;
+  }
+
+  .sidebar-logo {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+  }
+}

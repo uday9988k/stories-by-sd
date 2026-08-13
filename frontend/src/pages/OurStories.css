@@ -1,0 +1,1088 @@
+/* =========================================================
+   SATYADEVA PHOTOGRAPHY
+   OUR STORIES
+   All classes are scoped with _OurStories
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.ourStoriesPage_OurStories {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #171717;
+}
+
+/* =========================================================
+   FEATURED / HERO STORY
+========================================================= */
+
+.featuredStory_OurStories {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.featuredOverlay_OurStories {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.08) 35%,
+    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+
+  z-index: 1;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.featuredContent_OurStories {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 90%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  margin-top: 50px;
+}
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.featuredLabel_OurStories {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.featuredDivider_OurStories {
+  width: 55px;
+  height: 1px;
+
+  background: #d4af37;
+
+  margin-bottom: 25px;
+}
+
+/* =========================================================
+   COUPLE NAME
+========================================================= */
+
+.featuredCoupleName_OurStories {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: clamp(50px, 7vw, 92px);
+
+  font-weight: 400;
+  line-height: 0.95;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   HERO DETAILS
+========================================================= */
+
+.featuredDetails_OurStories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 13px;
+
+  margin-top: 22px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.featuredLocation_OurStories,
+.featuredDate_OurStories {
+  white-space: nowrap;
+}
+
+.featuredDot_OurStories {
+  color: #d4af37;
+  font-size: 16px;
+}
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.featuredButton_OurStories {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 38px;
+
+  min-width: 205px;
+  height: 50px;
+
+  padding: 0 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  border-radius: 0;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(5px);
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.featuredButton_OurStories:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #111111;
+
+  transform: translateY(-2px);
+}
+
+.featuredButtonText_OurStories {
+  display: inline-block;
+}
+
+.featuredButtonArrow_OurStories {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.featuredButton_OurStories:hover .featuredButtonArrow_OurStories {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scrollIndicator_OurStories {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+  bottom: 28px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  cursor: pointer;
+}
+
+.scrollText_OurStories {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+}
+
+.scrollArrow_OurStories {
+  font-size: 21px;
+
+  line-height: 1;
+
+  animation: scrollBounce_OurStories 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollBounce_OurStories {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* =========================================================
+   STORIES SECTION
+========================================================= */
+
+.allStoriesSection_OurStories {
+  width: 100%;
+
+  padding: 120px clamp(25px, 6vw, 100px) 130px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.storiesSectionHeader_OurStories {
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.storiesSmallLabel_OurStories {
+  display: block;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #b08d25;
+
+  text-transform: uppercase;
+
+  margin-bottom: 17px;
+}
+
+.storiesSectionTitle_OurStories {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  color: #1a1a1a;
+}
+
+.storiesSectionDescription_OurStories {
+  max-width: 570px;
+
+  margin: 22px auto 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #777777;
+}
+
+/* =========================================================
+   STORIES GRID
+========================================================= */
+
+.storiesGrid_OurStories {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 55px 28px;
+}
+
+/* =========================================================
+   STORY CARD
+========================================================= */
+
+.storyCard_OurStories {
+  min-width: 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CARD IMAGE WRAPPER
+========================================================= */
+
+.storyCardImageWrapper_OurStories {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+}
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.storyCardImage_OurStories {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* =========================================================
+   CARD OVERLAY
+========================================================= */
+
+.storyCardOverlay_OurStories {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.storyCard_OurStories:hover .storyCardImage_OurStories {
+  transform: scale(1.045);
+}
+
+.storyCard_OurStories:hover .storyCardOverlay_OurStories {
+  opacity: 1;
+}
+
+/* =========================================================
+   CARD VIEW BUTTON
+========================================================= */
+
+.storyCardViewButton_OurStories {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translate(-50%, 15px);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 145px;
+
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  background: rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(4px);
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.storyCard_OurStories:hover .storyCardViewButton_OurStories {
+  opacity: 1;
+
+  transform: translate(-50%, 0);
+}
+
+.storyCardViewButton_OurStories:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.storyCardArrow_OurStories {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.storyCardViewButton_OurStories:hover .storyCardArrow_OurStories {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   CARD DETAILS
+========================================================= */
+
+.storyCardDetails_OurStories {
+  padding: 20px 3px 0;
+}
+
+.storyCardTitle_OurStories {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #202020;
+}
+
+.storyCardMeta_OurStories {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 9px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.8px;
+
+  color: #888888;
+}
+
+.storyCardDot_OurStories {
+  color: #d4af37;
+}
+
+/* =========================================================
+   END SECTION
+========================================================= */
+
+.storiesEndSection_OurStories {
+  min-height: 440px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 25px;
+
+  background: #111111;
+
+  color: #ffffff;
+}
+
+.storiesEndLine_OurStories {
+  width: 45px;
+  height: 1px;
+
+  background: #d4af37;
+
+  margin-bottom: 25px;
+}
+
+.storiesEndLabel_OurStories {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #d4af37;
+}
+
+.storiesEndTitle_OurStories {
+  max-width: 700px;
+
+  margin: 20px 0 10px;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.storiesEndText_OurStories {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  color: #999999;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.storiesLoading_OurStories {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111111;
+}
+
+.storiesLoadingContent_OurStories {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.loadingSpinner_OurStories {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #d4af37;
+
+  border-radius: 50%;
+
+  animation: loadingSpin_OurStories 0.9s linear infinite;
+}
+
+@keyframes loadingSpin_OurStories {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText_OurStories {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #aaaaaa;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.storiesError_OurStories {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #111111;
+}
+
+.storiesErrorContent_OurStories {
+  max-width: 500px;
+
+  text-align: center;
+}
+
+.errorTitle_OurStories {
+  margin: 0 0 12px;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.errorMessage_OurStories {
+  margin: 0 0 25px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #999999;
+}
+
+.retryButton_OurStories {
+  min-width: 120px;
+  height: 42px;
+
+  padding: 0 20px;
+
+  border: 1px solid #d4af37;
+
+  background: transparent;
+
+  color: #d4af37;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.retryButton_OurStories:hover {
+  background: #d4af37;
+  color: #111111;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.storiesEmpty_OurStories {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111111;
+}
+
+.storiesEmptyContent_OurStories {
+  text-align: center;
+}
+
+.emptyIcon_OurStories {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #d4af37;
+
+  font-family: Georgia, serif;
+
+  font-size: 45px;
+}
+
+.emptyTitle_OurStories {
+  margin: 0 0 10px;
+
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+
+  font-size: 45px;
+
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.emptyMessage_OurStories {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  color: #888888;
+}
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .storiesGrid_OurStories {
+    gap: 45px 22px;
+  }
+
+  .allStoriesSection_OurStories {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .featuredStory_OurStories {
+    min-height: 600px;
+  }
+
+  .featuredCoupleName_OurStories {
+    font-size: clamp(45px, 9vw, 75px);
+  }
+
+  .storiesGrid_OurStories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 40px 20px;
+  }
+
+  .allStoriesSection_OurStories {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .storiesSectionHeader_OurStories {
+    margin-bottom: 55px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .featuredStory_OurStories {
+    height: 100svh;
+    min-height: 560px;
+
+    background-position: center center;
+  }
+
+  .featuredContent_OurStories {
+    width: 90%;
+
+    margin-top: 20px;
+  }
+
+  .featuredLabel_OurStories {
+    font-size: 8px;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 14px;
+  }
+
+  .featuredDivider_OurStories {
+    width: 40px;
+
+    margin-bottom: 20px;
+  }
+
+  .featuredCoupleName_OurStories {
+    font-size: clamp(42px, 13vw, 65px);
+
+    line-height: 0.95;
+  }
+
+  .featuredDetails_OurStories {
+    gap: 8px;
+
+    margin-top: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .featuredButton_OurStories {
+    min-width: 190px;
+
+    height: 46px;
+
+    margin-top: 30px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .scrollIndicator_OurStories {
+    bottom: 20px;
+  }
+
+  .scrollText_OurStories {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .scrollArrow_OurStories {
+    font-size: 18px;
+  }
+
+  /* -----------------------------------------
+     STORIES SECTION
+  ------------------------------------------ */
+
+  .allStoriesSection_OurStories {
+    padding: 75px 18px 85px;
+  }
+
+  .storiesSectionHeader_OurStories {
+    margin-bottom: 45px;
+  }
+
+  .storiesSmallLabel_OurStories {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+  .storiesSectionTitle_OurStories {
+    font-size: 38px;
+
+    line-height: 1.05;
+  }
+
+  .storiesSectionDescription_OurStories {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+  /* -----------------------------------------
+     CARDS
+  ------------------------------------------ */
+
+  .storiesGrid_OurStories {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+  .storyCardImageWrapper_OurStories {
+    aspect-ratio: 4 / 5;
+  }
+
+  .storyCardDetails_OurStories {
+    padding-top: 16px;
+  }
+
+  .storyCardTitle_OurStories {
+    font-size: 27px;
+  }
+
+  .storyCardMeta_OurStories {
+    font-size: 9px;
+
+    margin-top: 7px;
+  }
+
+  /* -----------------------------------------
+     MOBILE BUTTON
+  ------------------------------------------ */
+
+  .storyCardOverlay_OurStories {
+    opacity: 1;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+
+  .storyCardViewButton_OurStories {
+    left: 18px;
+    bottom: 18px;
+
+    transform: none;
+
+    opacity: 1;
+
+    min-width: 125px;
+
+    height: 38px;
+
+    font-size: 8px;
+  }
+
+  .storyCard_OurStories:hover .storyCardViewButton_OurStories {
+    transform: none;
+  }
+
+  /* -----------------------------------------
+     END SECTION
+  ------------------------------------------ */
+
+  .storiesEndSection_OurStories {
+    min-height: 350px;
+
+    padding: 70px 20px;
+  }
+
+  .storiesEndTitle_OurStories {
+    font-size: 40px;
+  }
+
+  .storiesEndText_OurStories {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .featuredCoupleName_OurStories {
+    font-size: 40px;
+  }
+
+  .featuredDetails_OurStories {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .featuredDot_OurStories {
+    display: none;
+  }
+
+  .featuredButton_OurStories {
+    min-width: 175px;
+  }
+
+  .storiesSectionTitle_OurStories {
+    font-size: 34px;
+  }
+
+  .storyCardTitle_OurStories {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,133 @@
+/* SECTION */
+
+.contactSection_contactUs {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background: #000;
+}
+
+/* CARD */
+
+.contactCard_contactUs {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+/* SMALL TITLE */
+
+.miniTitle_contactUs {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* MAIN HEADING */
+
+.heading_contactUs {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+/* SUBTITLE */
+
+.subHeading_contactUs {
+  color: #a8a8a8;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 55px;
+}
+
+/* FORM */
+
+.form_contactUs {
+  width: 100%;
+}
+
+/* INPUT GROUP */
+
+.inputGroup_contactUs {
+  margin-bottom: 25px;
+}
+
+/* INPUT */
+
+.inputGroup_contactUs input,
+.inputGroup_contactUs textarea {
+  width: 100%;
+  padding: 18px 22px;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.35s;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* PLACEHOLDER */
+
+.inputGroup_contactUs input::placeholder,
+.inputGroup_contactUs textarea::placeholder {
+  color: #777;
+}
+
+/* FOCUS */
+
+.inputGroup_contactUs input:focus,
+.inputGroup_contactUs textarea:focus {
+  border-color: #d4af37;
+  background: #161616;
+}
+
+/* BUTTON */
+
+.button_contactUs {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+/* HOVER */
+
+.button_contactUs:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .heading_contactUs {
+    font-size: 34px;
+    letter-spacing: 4px;
+  }
+
+  .subHeading_contactUs {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .contactSection_contactUs {
+    padding: 80px 25px;
+  }
+}

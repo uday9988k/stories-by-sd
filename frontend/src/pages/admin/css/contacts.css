@@ -1,0 +1,297 @@
+.contactsPage_adminContact {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.contactsHeader_adminContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.contactsMiniTitle_adminContact {
+  color: #c9a227;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.contactsTitle_adminContact {
+  margin: 8px 0;
+  font-size: 32px;
+  color: #222;
+}
+
+.contactsSubtitle_adminContact {
+  margin: 0;
+  color: #777;
+}
+
+.contactsCount_adminContact {
+  min-width: 110px;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+}
+
+.contactsCount_adminContact span {
+  display: block;
+  font-size: 28px;
+  color: #d4af37;
+}
+
+.contactsCount_adminContact small {
+  color: #aaa;
+}
+
+/* TABLE */
+
+.contactsTableWrapper_adminContact {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contactsTable_adminContact {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+
+.contactsTable_adminContact th {
+  padding: 16px;
+  text-align: left;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.contactsTable_adminContact td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  font-size: 14px;
+}
+
+.contactsTable_adminContact tr:hover {
+  background: #fafafa;
+}
+
+.contactPhoneLink_adminContact {
+  color: #333;
+  text-decoration: none;
+}
+
+.contactPhoneLink_adminContact:hover {
+  color: #c9a227;
+}
+
+.contactMessage_adminContact {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* STATUS */
+
+.contactStatus_adminContact {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  outline: none;
+}
+
+.contactStatus_adminContact.new {
+  background: #fff4d6;
+  color: #946c00;
+}
+
+.contactStatus_adminContact.contacted {
+  background: #e4f5e9;
+  color: #23733b;
+}
+
+.contactStatus_adminContact.closed {
+  background: #eeeeee;
+  color: #555;
+}
+
+/* ACTIONS */
+
+.contactActions_adminContact {
+  display: flex;
+  gap: 8px;
+}
+
+.contactViewBtn_adminContact,
+.contactDeleteBtn_adminContact {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactViewBtn_adminContact {
+  background: #111;
+  color: #fff;
+}
+
+.contactDeleteBtn_adminContact {
+  background: #e53935;
+  color: #fff;
+}
+
+.contactViewBtn_adminContact:hover {
+  background: #c9a227;
+}
+
+.contactDeleteBtn_adminContact:hover {
+  background: #c62828;
+}
+
+/* EMPTY */
+
+.contactsEmpty_adminContact,
+.contactsLoading_adminContact {
+  padding: 80px 20px;
+  text-align: center;
+  color: #777;
+}
+
+/* MODAL */
+
+.contactModalOverlay_adminContact {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.contactModal_adminContact {
+  position: relative;
+
+  width: 100%;
+  max-width: 600px;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+.contactModalClose_adminContact {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #111;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.contactModalLabel_adminContact {
+  color: #c9a227;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.contactModal_adminContact h2 {
+  margin: 10px 0 30px;
+  font-size: 30px;
+}
+
+.contactModalInfo_adminContact > div {
+  margin-bottom: 20px;
+}
+
+.contactModalInfo_adminContact span,
+.contactModalStatus_adminContact span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #999;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.contactModalInfo_adminContact p {
+  margin: 0;
+  color: #333;
+}
+
+.contactModalInfo_adminContact a {
+  color: #222;
+  text-decoration: none;
+}
+
+.contactModalMessage_adminContact {
+  line-height: 1.7;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.contactModalStatus_adminContact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactModalStatus_adminContact select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .contactsPage_adminContact {
+    padding: 20px 15px;
+  }
+
+  .contactsHeader_adminContact {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contactsTitle_adminContact {
+    font-size: 26px;
+  }
+
+  .contactsCount_adminContact {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactModal_adminContact {
+    padding: 30px 20px;
+  }
+}

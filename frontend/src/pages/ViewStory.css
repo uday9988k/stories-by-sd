@@ -1,0 +1,1093 @@
+/* =========================================================
+   STORIES BY SD
+   VIEW STORY PAGE - Enhanced with Animations
+   All classes are scoped with _OurStories
+========================================================= */
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.viewStoryPage_OurStories {
+  width: 100%;
+  min-height: 100vh;
+  background: #fcfaf7;
+  color: #1a1a1a;
+  animation: viewStoryFadeIn_OurStories 0.8s ease forwards;
+}
+
+@keyframes viewStoryFadeIn_OurStories {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.viewStoryHero_OurStories {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.viewStoryHero_OurStories::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.viewStoryHeroOverlay_OurStories {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.viewStoryHeroContent_OurStories {
+  position: relative;
+  z-index: 2;
+  width: min(900px, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+  animation: viewStoryHeroRise_OurStories 1.2s ease forwards;
+}
+
+@keyframes viewStoryHeroRise_OurStories {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.viewStoryHeroLabel_OurStories {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.viewStoryHeroDivider_OurStories {
+  width: 55px;
+  height: 2px;
+  background: #d4af37;
+  margin-bottom: 25px;
+  animation: viewStoryDividerGrow_OurStories 1.6s ease forwards;
+}
+
+@keyframes viewStoryDividerGrow_OurStories {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 55px;
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   COUPLE NAME
+========================================================= */
+
+.viewStoryCoupleName_OurStories {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(50px, 7vw, 92px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.viewStoryMeta_OurStories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 23px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.viewStoryLocation_OurStories,
+.viewStoryDate_OurStories {
+  white-space: nowrap;
+}
+
+.viewStoryDot_OurStories {
+  color: #d4af37;
+  font-size: 16px;
+}
+
+/* =========================================================
+   BACK BUTTON ON HERO
+========================================================= */
+
+.viewStoryBackTopButton_OurStories {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  z-index: 5;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewStoryBackTopButton_OurStories:hover {
+  background: #ffffff;
+  color: #111111;
+  border-color: #ffffff;
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   STORY INFORMATION
+========================================================= */
+
+.viewStoryInfoSection_OurStories {
+  width: 100%;
+  padding: 120px 25px 125px;
+  background: #ffffff;
+}
+
+.viewStoryInfoInner_OurStories {
+  width: min(850px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================================================
+   INFO LABEL
+========================================================= */
+
+.viewStoryInfoLabel_OurStories {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #b08d25;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   INFO TITLE
+========================================================= */
+
+.viewStoryInfoTitle_OurStories {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.viewStoryDescription_OurStories {
+  max-width: 680px;
+  margin: 28px auto 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+  color: #777777;
+}
+
+/* =========================================================
+   INFO DIVIDER
+========================================================= */
+
+.viewStoryInfoDivider_OurStories {
+  width: 45px;
+  height: 2px;
+  background: #d4af37;
+  margin: 38px auto;
+}
+
+/* =========================================================
+   INFO DETAILS
+========================================================= */
+
+.viewStoryInfoDetails_OurStories {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.viewStoryInfoItem_OurStories {
+  min-width: 0;
+  padding: 22px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-right: 1px solid #eeeeee;
+  transition: background 0.3s ease;
+}
+
+.viewStoryInfoItem_OurStories:last-child {
+  border-right: none;
+}
+
+.viewStoryInfoItem_OurStories:hover {
+  background: #faf8f5;
+}
+
+.viewStoryInfoItemLabel_OurStories {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #999999;
+}
+
+.viewStoryInfoItemValue_OurStories {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  color: #222222;
+  text-align: center;
+}
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.viewStorySectionHeader_OurStories {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.viewStorySectionLabel_OurStories {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #b08d25;
+  margin-bottom: 16px;
+}
+
+.viewStorySectionTitle_OurStories {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.viewStoryGallerySection_OurStories {
+  width: 100%;
+  padding: 110px clamp(18px, 5vw, 80px) 120px;
+  background: #f8f6f2;
+}
+
+/* =========================================================
+   MASONRY-STYLE GALLERY
+========================================================= */
+
+.viewStoryGalleryGrid_OurStories {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  columns: 3 320px;
+  column-gap: 18px;
+}
+
+/* =========================================================
+   GALLERY ITEM
+========================================================= */
+
+.viewStoryGalleryItem_OurStories {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: #e8e5df;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  cursor: pointer;
+  border-radius: 4px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.viewStoryGalleryItem_OurStories:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.viewStoryGalleryImage_OurStories {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.viewStoryGalleryItem_OurStories:hover .viewStoryGalleryImage_OurStories {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   GALLERY OVERLAY (Zoom icon)
+========================================================= */
+
+.viewStoryGalleryOverlay_OurStories {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.viewStoryGalleryItem_OurStories:hover .viewStoryGalleryOverlay_OurStories {
+  opacity: 1;
+}
+
+.viewStoryGalleryZoom_OurStories {
+  font-size: 32px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+  font-family: Georgia, serif;
+}
+
+.viewStoryGalleryItem_OurStories:hover .viewStoryGalleryZoom_OurStories {
+  transform: scale(1);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .viewStoryGallerySection_OurStories {
+    padding: 90px 25px 100px;
+  }
+
+  .viewStoryGalleryGrid_OurStories {
+    columns: 2 280px;
+    column-gap: 14px;
+  }
+
+  .viewStoryGalleryItem_OurStories {
+    margin-bottom: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .viewStoryGallerySection_OurStories {
+    padding: 75px 12px 80px;
+  }
+
+  .viewStoryGalleryGrid_OurStories {
+    columns: 1;
+  }
+
+  .viewStoryGalleryItem_OurStories {
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+
+  .viewStoryGalleryImage_OurStories {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* =========================================================
+   VIDEOS SECTION
+========================================================= */
+
+.viewStoryVideosSection_OurStories {
+  width: 100%;
+  padding: 110px clamp(18px, 5vw, 80px) 120px;
+  background: #fcfaf7;
+}
+
+.viewStoryVideosSection_OurStories .viewStorySectionLabel_OurStories {
+  color: #b08d25;
+}
+
+.viewStoryVideosSection_OurStories .viewStorySectionTitle_OurStories {
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   VIDEOS GRID
+========================================================= */
+
+.viewStoryVideosGrid_OurStories {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* =========================================================
+   VIDEO ITEM
+========================================================= */
+
+.viewStoryVideoItem_OurStories {
+  width: 100%;
+  overflow: hidden;
+  background: #f0ede8;
+  border-radius: 6px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.viewStoryVideoItem_OurStories:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.viewStoryVideo_OurStories {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #000000;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   END SECTION
+========================================================= */
+
+.viewStoryEndSection_OurStories {
+  min-height: 430px;
+  padding: 80px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+.viewStoryEndLine_OurStories {
+  width: 45px;
+  height: 2px;
+  background: #d4af37;
+  margin-bottom: 25px;
+}
+
+.viewStoryEndLabel_OurStories {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #b08d25;
+}
+
+.viewStoryEndTitle_OurStories {
+  max-width: 700px;
+  margin: 20px 0 30px;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   END BUTTON
+========================================================= */
+
+.viewStoryEndButton_OurStories {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 190px;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid #222222;
+  background: transparent;
+  color: #222222;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewStoryEndButton_OurStories:hover {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.viewStoryEndArrow_OurStories {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.viewStoryEndButton_OurStories:hover .viewStoryEndArrow_OurStories {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.viewStoryLoading_OurStories {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfaf7;
+}
+
+.viewStoryLoadingContent_OurStories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.viewStorySpinner_OurStories {
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-top-color: #d4af37;
+  border-radius: 50%;
+  animation: viewStorySpin_OurStories 0.9s linear infinite;
+}
+
+@keyframes viewStorySpin_OurStories {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.viewStoryLoadingText_OurStories {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.viewStoryError_OurStories {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: #fcfaf7;
+}
+
+.viewStoryErrorContent_OurStories {
+  max-width: 500px;
+  text-align: center;
+}
+
+.viewStoryErrorIcon_OurStories {
+  display: block;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+  font-size: 45px;
+  color: #d4af37;
+}
+
+.viewStoryErrorTitle_OurStories {
+  margin: 0 0 12px;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: 45px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.viewStoryErrorMessage_OurStories {
+  margin: 0 0 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #777777;
+}
+
+.viewStoryBackButton_OurStories {
+  min-width: 170px;
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewStoryBackButton_OurStories:hover {
+  background: #d4af37;
+  color: #ffffff;
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   FULLSCREEN GALLERY MODAL
+========================================================= */
+
+.viewStoryFullscreen_OurStories {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  animation: viewStoryFadeIn_OurStories 0.4s ease forwards;
+  cursor: pointer;
+}
+
+.viewStoryFullscreenContent_OurStories {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: viewStoryZoomIn_OurStories 0.5s ease forwards;
+}
+
+@keyframes viewStoryZoomIn_OurStories {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.viewStoryFullscreenImage_OurStories {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.viewStoryFullscreenClose_OurStories {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  font-size: 28px;
+  color: #1a1a1a;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: Georgia, serif;
+}
+
+.viewStoryFullscreenClose_OurStories:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .viewStoryInfoSection_OurStories {
+    padding-top: 100px;
+    padding-bottom: 105px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .viewStoryHero_OurStories {
+    min-height: 600px;
+  }
+
+  .viewStoryCoupleName_OurStories {
+    font-size: clamp(45px, 9vw, 75px);
+  }
+
+  .viewStoryInfoDetails_OurStories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .viewStoryInfoItem_OurStories:nth-child(2) {
+    border-right: none;
+  }
+
+  .viewStoryInfoItem_OurStories:nth-child(3),
+  .viewStoryInfoItem_OurStories:nth-child(4) {
+    border-top: 1px solid #eeeeee;
+  }
+
+  .viewStoryVideosGrid_OurStories {
+    grid-template-columns: 1fr;
+  }
+
+  .viewStoryGallerySection_OurStories,
+  .viewStoryVideosSection_OurStories {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .viewStoryFullscreenClose_OurStories {
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .viewStoryFullscreen_OurStories {
+    padding: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .viewStoryHero_OurStories {
+    height: 100svh;
+    min-height: 560px;
+    background-position: center center;
+  }
+
+  .viewStoryHeroContent_OurStories {
+    width: 90%;
+    margin-top: 25px;
+  }
+
+  .viewStoryHeroLabel_OurStories {
+    font-size: 8px;
+    letter-spacing: 3.5px;
+    margin-bottom: 14px;
+  }
+
+  .viewStoryHeroDivider_OurStories {
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  .viewStoryCoupleName_OurStories {
+    font-size: clamp(42px, 13vw, 65px);
+    line-height: 0.95;
+  }
+
+  .viewStoryMeta_OurStories {
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .viewStoryBackTopButton_OurStories {
+    top: 20px;
+    left: 18px;
+    height: 38px;
+    padding: 0 14px;
+    font-size: 8px;
+  }
+
+  /* -----------------------------------------
+     INFORMATION
+  ------------------------------------------ */
+
+  .viewStoryInfoSection_OurStories {
+    padding: 75px 18px 80px;
+  }
+
+  .viewStoryInfoTitle_OurStories {
+    font-size: 40px;
+  }
+
+  .viewStoryDescription_OurStories {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .viewStoryInfoDivider_OurStories {
+    margin: 30px auto;
+  }
+
+  .viewStoryInfoDetails_OurStories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .viewStoryInfoItem_OurStories {
+    padding: 17px 8px;
+  }
+
+  .viewStoryInfoItemLabel_OurStories {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .viewStoryInfoItemValue_OurStories {
+    font-size: 18px;
+  }
+
+  /* -----------------------------------------
+     SECTION HEADERS
+  ------------------------------------------ */
+
+  .viewStorySectionHeader_OurStories {
+    margin-bottom: 38px;
+  }
+
+  .viewStorySectionLabel_OurStories {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .viewStorySectionTitle_OurStories {
+    font-size: 39px;
+  }
+
+  /* -----------------------------------------
+     GALLERY
+  ------------------------------------------ */
+
+  .viewStoryGallerySection_OurStories {
+    padding: 75px 12px 80px;
+  }
+
+  .viewStoryGalleryGrid_OurStories {
+    columns: 1;
+  }
+
+  .viewStoryGalleryItem_OurStories {
+    margin-bottom: 10px;
+  }
+
+  .viewStoryGalleryImage_OurStories {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+  /* -----------------------------------------
+     VIDEOS
+  ------------------------------------------ */
+
+  .viewStoryVideosSection_OurStories {
+    padding: 75px 12px 80px;
+  }
+
+  .viewStoryVideosGrid_OurStories {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .viewStoryVideo_OurStories {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* -----------------------------------------
+     END
+  ------------------------------------------ */
+
+  .viewStoryEndSection_OurStories {
+    min-height: 370px;
+    padding: 70px 20px;
+  }
+
+  .viewStoryEndTitle_OurStories {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .viewStoryEndButton_OurStories {
+    min-width: 180px;
+    height: 45px;
+    font-size: 8px;
+  }
+
+  .viewStoryFullscreenClose_OurStories {
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .viewStoryFullscreen_OurStories {
+    padding: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .viewStoryCoupleName_OurStories {
+    font-size: 40px;
+  }
+
+  .viewStoryMeta_OurStories {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .viewStoryDot_OurStories {
+    display: none;
+  }
+
+  .viewStoryInfoTitle_OurStories {
+    font-size: 36px;
+  }
+
+  .viewStorySectionTitle_OurStories {
+    font-size: 35px;
+  }
+
+  .viewStoryInfoDetails_OurStories {
+    grid-template-columns: 1fr;
+  }
+
+  .viewStoryInfoItem_OurStories {
+    border-right: none !important;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .viewStoryInfoItem_OurStories:first-child {
+    border-top: none;
+  }
+}
