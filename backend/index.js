@@ -13,7 +13,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Backend health check
 app.get("/api", (req, res) => {
   res.json({
     success: true,
