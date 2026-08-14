@@ -1,17 +1,32 @@
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 
-require("./Models/db");
+const connectDB = require("../Models/db");
 
-const adminRoutes = require("./Routes/adminRoutes");
-const storyRoutes = require("./Routes/storyRoutes");
-const contactRoutes = require("./Routes/contactRoutes");
+const adminRoutes = require("../Routes/adminRoutes");
+const storyRoutes = require("../Routes/storyRoutes");
+const contactRoutes = require("../Routes/contactRoutes");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// Connect before handling API requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("Database connection failed:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Database connection failed",
+      error: error.message,
+    });
+  }
+});
 
 app.get("/api", (req, res) => {
   res.json({
@@ -23,13 +38,5 @@ app.get("/api", (req, res) => {
 app.use("/api/admin", adminRoutes);
 app.use("/api/story", storyRoutes);
 app.use("/api/contact", contactRoutes);
-
-if (process.env.NODE_ENV !== "production") {
-  const PORT = process.env.PORT || 8080;
-
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-}
 
 module.exports = app;

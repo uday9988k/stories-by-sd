@@ -24,7 +24,9 @@ const ViewStory = () => {
       setLoading(true);
       setError("");
 
-      const response = await axios.get(`/api/story/${id}`);
+      const response = await axios.get(
+        `https://stories-by-sd.vercel.app/api/story/${id}`,
+      );
 
       if (response.data.success) {
         setStory(response.data.story);

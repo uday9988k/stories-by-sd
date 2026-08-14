@@ -23,7 +23,9 @@ const OurStories = () => {
       setLoading(true);
       setError("");
 
-      const response = await axios.get("/api/story");
+      const response = await axios.get(
+        "https://stories-by-sd.vercel.app/api/story",
+      );
 
       if (response.data.success) {
         setStories(response.data.stories || []);
