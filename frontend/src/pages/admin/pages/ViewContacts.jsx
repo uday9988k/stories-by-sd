@@ -16,11 +16,14 @@ const ViewContacts = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const response = await axios.get("/api/contact", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        "https://stories-by-sd.vercel.app/api/contact",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       if (response.data.success) {
         setContacts(response.data.contacts);
@@ -45,7 +48,7 @@ const ViewContacts = () => {
       const token = localStorage.getItem("adminToken");
 
       const response = await axios.put(
-        `/api/contact/${id}/status`,
+        `https://stories-by-sd.vercel.app/api/contact/${id}/status`,
         {
           status,
         },
@@ -96,11 +99,14 @@ const ViewContacts = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const response = await axios.delete(`/api/contact/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.delete(
+        `https://stories-by-sd.vercel.app/api/contact/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       if (response.data.success) {
         setContacts((prev) => prev.filter((contact) => contact._id !== id));

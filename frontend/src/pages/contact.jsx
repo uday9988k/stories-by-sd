@@ -34,12 +34,15 @@ const Contact = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("/api/contact", {
-        name: formData.name.trim(),
-        location: formData.location.trim(),
-        phone: formData.phone.trim(),
-        message: formData.message.trim(),
-      });
+      const response = await axios.post(
+        "https://stories-by-sd.vercel.app/api/contact",
+        {
+          name: formData.name.trim(),
+          location: formData.location.trim(),
+          phone: formData.phone.trim(),
+          message: formData.message.trim(),
+        },
+      );
 
       if (response.data.success) {
         alert("Thank you for contacting Stories By SD!");

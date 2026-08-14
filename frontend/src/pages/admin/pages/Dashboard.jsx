@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   const fetchStories = async () => {
     try {
-      const res = await axios.get("/api/story");
+      const res = await axios.get("https://stories-by-sd.vercel.app/api/story");
 
       if (res.data.success) {
         setStories(res.data.stories);

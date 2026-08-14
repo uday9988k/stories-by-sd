@@ -18,7 +18,7 @@ const ViewStories = () => {
   // Fetch Stories
   const fetchStories = async () => {
     try {
-      const res = await axios.get("/api/story");
+      const res = await axios.get("https://stories-by-sd.vercel.app/api/story");
 
       if (res.data.success) {
         setStories(res.data.stories);
@@ -44,11 +44,14 @@ const ViewStories = () => {
     try {
       const token = localStorage.getItem("adminToken");
 
-      const res = await axios.delete(`/api/story/${deleteId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const res = await axios.delete(
+        `https://stories-by-sd.vercel.app/api/story/${deleteId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       if (res.data.success) {
         // Refresh stories after deletion

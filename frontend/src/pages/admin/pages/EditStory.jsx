@@ -542,22 +542,26 @@ const EditStory = () => {
       // API Request
       // ================================
 
-      const res = await axios.put(`/api/story/${id}`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-        },
+      const res = await axios.put(
+        `https://stories-by-sd.vercel.app/api/story/${id}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
 
-        onUploadProgress: (progressEvent) => {
-          if (progressEvent.total) {
-            const progress = Math.round(
-              (progressEvent.loaded * 100) / progressEvent.total,
-            );
+          onUploadProgress: (progressEvent) => {
+            if (progressEvent.total) {
+              const progress = Math.round(
+                (progressEvent.loaded * 100) / progressEvent.total,
+              );
 
-            setUploadProgress(progress);
-          }
+              setUploadProgress(progress);
+            }
+          },
         },
-      });
+      );
 
       if (res.data.success) {
         toast.success("Wedding Story Updated Successfully!", toastConfig);

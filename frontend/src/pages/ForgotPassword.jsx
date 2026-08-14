@@ -96,11 +96,14 @@ const ForgotPassword = () => {
     try {
       setLoading(true);
 
-      const res = await axios.put("/api/admin/reset-password", {
-        email,
-        otp,
-        newPassword,
-      });
+      const res = await axios.put(
+        "https://stories-by-sd.vercel.app/api/admin/reset-password",
+        {
+          email,
+          otp,
+          newPassword,
+        },
+      );
 
       if (res.data.success) {
         toast.success("Password changed successfully");
