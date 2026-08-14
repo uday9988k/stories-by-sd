@@ -96,7 +96,9 @@ const EditStory = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get(`/api/story/${id}`);
+      const res = await axios.get(
+        `https://stories-by-sd.vercel.app/api/story/${id}`,
+      );
 
       if (res.data.success) {
         const data = res.data.story;
