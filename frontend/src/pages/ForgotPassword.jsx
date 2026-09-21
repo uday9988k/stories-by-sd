@@ -66,9 +66,12 @@ const ForgotPassword = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post("/api/admin/forgot-password", {
-        email,
-      });
+      const res = await axios.post(
+        "https://stories-by-sd.vercel.app/api/admin/forgot-password",
+        {
+          email,
+        },
+      );
 
       if (res.data.success) {
         toast.success("OTP sent successfully");
