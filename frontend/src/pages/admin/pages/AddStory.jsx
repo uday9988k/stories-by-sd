@@ -540,7 +540,6 @@ const AddStory = () => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
           },
           onUploadProgress: (progressEvent) => {
             const percent = Math.round(
